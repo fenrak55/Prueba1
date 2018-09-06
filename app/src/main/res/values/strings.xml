@@ -10,8 +10,19 @@
     <string name="btn_image_numero">Telefono</string>
     <string name="btn_image_view">Vista</string>
 
+<<<<<<< Updated upstream
     <!--item_list_principal-->
     <string name="image_principal">Imagen principal</string>
     <string name="icono_principal">Icono principal</string>
     <string name="nombre_categoria">Nombre categoria</string>
+=======
+    <!--Registro-->
+    <string name="tv_nombre">Ingrese su nombre</string>
+    <string name="tv_email">Ingrese su email</string>
+    <string name="tv_celular">Ingrese su celular</string>
+    <string name="btn_enviar">Enviar</string>
+
+    <!--Ayuda-->
+    <string name="descripcion">Bienvenido a la pantalla de ayuda de TuristApp. Aqui encontraras informacion adicional por en caso de que la necesites.</string>
+>>>>>>> Stashed changes
 </resources>

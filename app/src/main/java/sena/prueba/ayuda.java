@@ -3,14 +3,14 @@ package sena.prueba;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class registro extends AppCompatActivity {
+public class ayuda extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+        setContentView(R.layout.activity_ayuda);
 
-        String title= "Registro";
+        String title="Ayuda";
         setTitle(title);
     }
 }
