@@ -11,11 +11,16 @@
     <string name="btn_image_view">Vista</string>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> a83c54ff4057bf3411d69fcb33079dba6887f6a4
     <!--item_list_principal-->
     <string name="image_principal">Imagen principal</string>
     <string name="icono_principal">Icono principal</string>
     <string name="nombre_categoria">Nombre categoria</string>
 =======
+<<<<<<< HEAD
     <!--activity_informacion-->
     <string name="logo_item">Logo del item</string>
     <string name="nombre_item">Nombre</string>
@@ -33,4 +38,15 @@
     <string name="menu_ayuda">Ayuda</string>
     <string name="menu_salir">Salir</string>
 >>>>>>> second
+=======
+    <!--Registro-->
+    <string name="tv_nombre">Ingrese su nombre</string>
+    <string name="tv_email">Ingrese su email</string>
+    <string name="tv_celular">Ingrese su celular</string>
+    <string name="btn_enviar">Enviar</string>
+
+    <!--Ayuda-->
+    <string name="descripcion">Bienvenido a la pantalla de ayuda de TuristApp. Aqui encontraras informacion adicional por en caso de que la necesites.</string>
+>>>>>>> Stashed changes
+>>>>>>> a83c54ff4057bf3411d69fcb33079dba6887f6a4
 </resources>

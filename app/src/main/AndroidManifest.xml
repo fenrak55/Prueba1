@@ -12,13 +12,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Splash"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".list_item_categoria"
             android:parentActivityName=".MainActivity"
@@ -29,6 +23,7 @@
             android:value=".MainActivity" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".registro"></activity>
 =======
         <activity
@@ -37,6 +32,18 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Registrarse"></activity>
 >>>>>>> second
+=======
+        <activity android:name=".registro">
+
+        </activity>
+        <activity android:name=".ayuda">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+>>>>>>> a83c54ff4057bf3411d69fcb33079dba6887f6a4
     </application>
 
 </manifest>
