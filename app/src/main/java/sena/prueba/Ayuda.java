@@ -2,8 +2,11 @@ package sena.prueba;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 
-public class ayuda extends AppCompatActivity {
+
+
+public class Ayuda extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -12,5 +15,11 @@ public class ayuda extends AppCompatActivity {
 
         String title="Ayuda";
         setTitle(title);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_informacion_item,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

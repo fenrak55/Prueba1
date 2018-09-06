@@ -22,21 +22,13 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <activity android:name=".registro"></activity>
-=======
         <activity
             android:name=".Informacion_item"
             android:parentActivityName=".list_item_categoria"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Registrarse"></activity>
->>>>>>> second
-=======
-        <activity android:name=".registro">
 
-        </activity>
-        <activity android:name=".ayuda">
+        <activity android:name=".Ayuda">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
