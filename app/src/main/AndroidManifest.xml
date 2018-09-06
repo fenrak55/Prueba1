@@ -22,6 +22,17 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <activity android:name=".registro"></activity>
+=======
+        <activity
+            android:name=".Informacion_item"
+            android:parentActivityName=".list_item_categoria"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Registrarse"></activity>
+>>>>>>> second
+=======
         <activity android:name=".registro">
 
         </activity>
@@ -32,6 +43,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+>>>>>>> a83c54ff4057bf3411d69fcb33079dba6887f6a4
     </application>
 
 </manifest>
