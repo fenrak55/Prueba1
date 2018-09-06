@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <item
+            android:id="@+id/menu_registrarse"
+            android:title="@string/menu_registrarse" />
+        <item
+            android:id="@+id/menu_ayuda"
+            android:title="@string/menu_ayuda" />
+        <item
+            android:id="@+id/menu_salir"
+            android:title="@string/menu_salir" />
+    </group>
+
+</menu>
