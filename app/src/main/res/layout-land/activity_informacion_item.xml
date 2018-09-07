@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".Informacion_item">
+    tools:context=".InformacionItem">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_item"

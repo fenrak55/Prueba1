@@ -13,7 +13,7 @@ import java.util.List;
 
 import sena.prueba.R;
 
-public class AdapterCategoria extends RecyclerView.Adapter<AdapterCategoria.AdapterHolderCategoria>{
+public class AdapterCategoria extends RecyclerView.Adapter<AdapterCategoria.AdapterHolderCategoria> implements View.OnClickListener{
 
     //Creo los objetos
     private Context context;
@@ -28,7 +28,9 @@ public class AdapterCategoria extends RecyclerView.Adapter<AdapterCategoria.Adap
     @NonNull
     @Override
     public AdapterCategoria.AdapterHolderCategoria onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View vista = LayoutInflater.from(context).inflate(R.layout.item_list_categoria, parent, false);
+        View vista = LayoutInflater.from(context).inflate(R.layout.item_list_principal, parent, false);
+
+        vista.setOnClickListener(this);
 
         return new AdapterHolderCategoria(vista);
     }
@@ -37,9 +39,10 @@ public class AdapterCategoria extends RecyclerView.Adapter<AdapterCategoria.Adap
         this.listener = listener;
     }
 
-    public void onClick(View view){
+    @Override
+    public void onClick(View v) {
         if (listener != null){
-            listener.onClick(view);
+            listener.onClick(v);
         }
     }
 

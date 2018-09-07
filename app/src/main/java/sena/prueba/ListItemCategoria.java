@@ -16,7 +16,7 @@ import java.util.List;
 import sena.prueba.Adaptadores.AdapterListCategoria;
 import sena.prueba.Adaptadores.DatosCategoria;
 
-public class list_item_categoria extends AppCompatActivity {
+public class ListItemCategoria extends AppCompatActivity {
 
     //Creamos los objetos
     RecyclerView recyclerListItem;

@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Informacion_item extends AppCompatActivity {
+public class InformacionItem extends AppCompatActivity {
 
     private Toolbar toolbar;
     private ActionBar actionBar;
