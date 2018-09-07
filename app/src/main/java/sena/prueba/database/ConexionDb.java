@@ -12,7 +12,9 @@ public class DataHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        //Creo la tabla Categorias
+        db.execSQL(Utilidades.CREA_TBL_CATEGORIA);
+        db.execSQL(Utilidades.INSERTA_TBL_CATEGORIA);
     }
 
     @Override
