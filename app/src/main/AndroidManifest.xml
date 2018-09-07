@@ -12,7 +12,9 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Splash"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
         <activity
             android:name=".list_item_categoria"
             android:parentActivityName=".MainActivity"
@@ -26,16 +28,17 @@
             android:name=".Informacion_item"
             android:parentActivityName=".list_item_categoria"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Registrarse"></activity>
-
-        <activity android:name=".Ayuda">
+        <activity android:name=".Registrarse">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
->>>>>>> a83c54ff4057bf3411d69fcb33079dba6887f6a4
+
+        <activity android:name=".Ayuda">
+
+        </activity>
     </application>
 
 </manifest>
