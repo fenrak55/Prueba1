@@ -33,18 +33,9 @@
         <activity
             android:name=".InformacionItem"
             android:parentActivityName=".ListItemCategoria"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-<<<<<<< HEAD
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
         <activity android:name=".Registrarse"></activity>
-
-        <activity android:name=".Ayuda">
-=======
-        <activity android:name=".Registrarse">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
->>>>>>> e0bb33bbbdd011fd2586b48392ebb33615209b1e
-
-        </activity>
 
         <activity android:name=".Ayuda">
 
