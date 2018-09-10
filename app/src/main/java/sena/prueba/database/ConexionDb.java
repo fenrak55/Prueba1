@@ -12,9 +12,17 @@ public class ConexionDb extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //Creo la tabla Categorias
+        //CREO LAS TABLAS
         db.execSQL(Utilidades.CREA_TBL_CATEGORIA);
+        db.execSQL(Utilidades.CREA_TBL_TIPO_ITEM);
+        db.execSQL(Utilidades.CREA_TBL_LUGAR);
+        db.execSQL(Utilidades.CREA_TBL_USUARIO);
+
+        //INSERTO EN LAS TABLAS
         db.execSQL(Utilidades.INSERTA_TBL_CATEGORIA);
+        db.execSQL(Utilidades.INSERTA_TBL_TIPO_ITEM);
+        db.execSQL(Utilidades.INSERTA_TBL_LUGAR);
+        db.execSQL(Utilidades.INSERTA_TBL_USUARIO);
     }
 
     @Override

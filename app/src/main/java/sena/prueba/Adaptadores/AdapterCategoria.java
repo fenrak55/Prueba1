@@ -40,9 +40,9 @@ public class AdapterCategoria extends RecyclerView.Adapter<AdapterCategoria.Adap
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View view) {
         if (listener != null){
-            listener.onClick(v);
+            listener.onClick(view);
         }
     }
 

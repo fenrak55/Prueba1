@@ -2,6 +2,9 @@
     <string name="app_name">Prueba</string>
     <string name="titulo">TuristApp</string>
 
+    <!--Splash-->
+    <string name="image_splash">Imagen de presentacion</string>
+
     <!--item_list_categoria-->
     <string name="image_list_categoria">Imagen</string>
     <string name="nombre_list_categoria">Nombre</string>

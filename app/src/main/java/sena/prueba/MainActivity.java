@@ -1,6 +1,7 @@
 package sena.prueba;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerCategorias;
     private List<Categoria> listaCategoria;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
         //Creamos las referencias
         recyclerCategorias = (RecyclerView) findViewById(R.id.recycler_principal);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_categorias);
 
+        toolbar.setTitle("Categorias");
+
+        setSupportActionBar(toolbar);
 
         if (getRotation().equals("Horizontal") || getRotation().equals("Horizontal_inversa")){
             recyclerCategorias.setLayoutManager(new GridLayoutManager(this, 2));
@@ -43,20 +50,27 @@ public class MainActivity extends AppCompatActivity {
 
         llenaRecycler();
 
-        //Creamos una instancia del adaptador de Categorias
-        AdapterCategoria adapter = new AdapterCategoria(this, listaCategoria);
-
-        recyclerCategorias.setAdapter(adapter);
-        recyclerCategorias.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                evento();
-            }
-        });
+        if (listaCategoria != null) {
+            //Creamos una instancia del adaptador de Categorias
+            AdapterCategoria adapter = new AdapterCategoria(this, listaCategoria);
+            adapter.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Rescato el id de la categoria
+                    int id = listaCategoria.get(recyclerCategorias.getChildAdapterPosition(v)).getId();
+                    evento(id);
+                }
+            });
+            recyclerCategorias.setAdapter(adapter);
+        }else{
+            Toast.makeText(this, "La lista de categorias esta vacia.", Toast.LENGTH_SHORT).show();
+        }
     }
 
-    public void evento(){
-        Toast.makeText(this, "Tocaste un item de categoria.", Toast.LENGTH_SHORT).show();
+    public void evento(int id){
+        Intent objIntent = new Intent(MainActivity.this, ListItemCategoria.class);
+        objIntent.putExtra(Utilidades.ID_TBL_CATEGORIA, id);
+        startActivity(objIntent);
     }
 
     public void llenaRecycler(){

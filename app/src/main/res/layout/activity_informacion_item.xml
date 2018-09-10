@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="7"
     android:orientation="vertical"
     tools:context=".InformacionItem">
 
@@ -11,7 +12,8 @@
         android:id="@+id/toolbar_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="4dp"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/colorWhite"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
@@ -28,6 +30,7 @@
         android:id="@+id/nombre_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:text="@string/nombre_item"/>
@@ -36,6 +39,7 @@
         android:id="@+id/descripcion_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:text="@string/descripcion_item"/>
@@ -44,6 +48,7 @@
         android:id="@+id/sitio_web_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:text="@string/sitio_web_item"/>
@@ -52,6 +57,7 @@
         android:id="@+id/direccion_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:text="@string/direccion_item"/>
@@ -60,6 +66,7 @@
         android:id="@+id/email_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:text="@string/email_item"/>
@@ -68,14 +75,16 @@
         android:id="@+id/telefono_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:text="@string/telefono_item"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        android:layout_weight="30"
         android:orientation="horizontal"
         android:gravity="center">
 
@@ -88,22 +97,22 @@
             android:contentDescription="@string/btn_image_web"/>
 
         <ImageButton
-            android:id="@+id/btn_image_mensaje"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_message"
-            android:background="@color/colorTransparent"
-            android:contentDescription="@string/btn_image_message"/>
-
-        <ImageButton
             android:id="@+id/btn_image_telefono"
             android:layout_width="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_phone"
             android:background="@color/colorTransparent"
             android:contentDescription="@string/btn_image_telefono"/>
+
+        <ImageButton
+            android:id="@+id/btn_image_mensaje"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_message"
+            android:background="@color/colorTransparent"
+            android:contentDescription="@string/btn_image_message"/>
 
     </LinearLayout>
 
