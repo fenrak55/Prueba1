@@ -1,5 +1,6 @@
 package sena.prueba;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.DialogFragment;
@@ -25,9 +26,10 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
     private Toolbar toolbar;
     private ActionBar actionBar;
     private ImageView imagen;
-    private TextView nombre, descripcion, sitioWeb, direccion, email, telefono;
+    private TextView viewNombre, viewDescripcion, viewSitioweb, viewDireccion, viewEmail, viewTelefono;
     private ImageButton btnWeb, btnMensaje, btnTelefono;
     private SQLiteDatabase objDb;
+    private String sitioWeb, email, telefono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +39,12 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
         //Creo las referencias
         toolbar = (Toolbar) findViewById(R.id.toolbar_item);
         imagen = (ImageView) findViewById(R.id.logo_item);
-        nombre = (TextView) findViewById(R.id.nombre_item);
-        descripcion = (TextView) findViewById(R.id.descripcion_item);
-        sitioWeb = (TextView) findViewById(R.id.sitio_web_item);
-        direccion = (TextView) findViewById(R.id.direccion_item);
-        email = (TextView) findViewById(R.id.email_item);
-        telefono = (TextView) findViewById(R.id.telefono_item);
+        viewNombre = (TextView) findViewById(R.id.nombre_item);
+        viewDescripcion = (TextView) findViewById(R.id.descripcion_item);
+        viewSitioweb = (TextView) findViewById(R.id.sitio_web_item);
+        viewDireccion = (TextView) findViewById(R.id.direccion_item);
+        viewEmail = (TextView) findViewById(R.id.email_item);
+        viewTelefono = (TextView) findViewById(R.id.telefono_item);
         btnWeb = (ImageButton) findViewById(R.id.btn_image_web);
         btnMensaje = (ImageButton) findViewById(R.id.btn_image_mensaje);
         btnTelefono = (ImageButton) findViewById(R.id.btn_image_telefono);
@@ -74,13 +76,17 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
             //Si obtenemos registros
             if (objCursor.moveToFirst()){
                 do {
+                    //Asigno los valores
                     imagen.setImageResource(objCursor.getInt(1));
-                    nombre.setText(objCursor.getString(2));
-                    descripcion.setText(objCursor.getString(3));
-                    direccion.setText(objCursor.getString(4));
-                    telefono.setText(objCursor.getString(5));
-                    sitioWeb.setText(objCursor.getString(6));
-                    email.setText(objCursor.getString(7));
+                    viewNombre.setText(objCursor.getString(2));
+                    viewDescripcion.setText(objCursor.getString(3));
+                    viewDireccion.setText(objCursor.getString(4));
+                    telefono = objCursor.getString(5);
+                    viewTelefono.setText(telefono);
+                    sitioWeb = objCursor.getString(6);
+                    viewSitioweb.setText(sitioWeb);
+                    email = objCursor.getString(7);
+                    viewEmail.setText(email);
                 }while (objCursor.moveToNext());
             }
         }catch (Exception e){
@@ -97,12 +103,18 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Intent objInten = null;
         switch (id){
             case R.id.menu_registrarse:
+                objInten = new Intent(InformacionItem.this, Registrarse.class);
+                startActivity(objInten);
                 break;
             case R.id.menu_ayuda:
+                objInten = new Intent(InformacionItem.this, Ayuda.class);
+                startActivity(objInten);
                 break;
             case R.id.menu_salir:
+
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -119,13 +131,13 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
         String mensaje = "";
         switch (id){
             case R.id.btn_image_web:
-                mensaje = "Sitio web";
+                mensaje = sitioWeb;
                 break;
             case R.id.btn_image_mensaje:
-                mensaje = "Mensaje";
+                mensaje = email;
                 break;
             case R.id.btn_image_telefono:
-                mensaje = "Telefono";
+                mensaje = telefono;
                 break;
         }
         Toast.makeText(this, "" + mensaje, Toast.LENGTH_SHORT).show();

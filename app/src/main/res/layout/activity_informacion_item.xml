@@ -92,7 +92,7 @@
             android:id="@+id/btn_image_web"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_view"
+            android:src="@drawable/ic_web_page"
             android:background="@color/colorTransparent"
             android:contentDescription="@string/btn_image_web"/>
 

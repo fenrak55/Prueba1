@@ -60,7 +60,6 @@ public class ListItemCategoria extends AppCompatActivity {
             llenaRecycler(idC);
         }else {
             llenaRecycler(idC);
-            Toast.makeText(this, "Evento terminado." + idC, Toast.LENGTH_SHORT).show();
         }
         //Creamos una instancia del adaptador
         AdapterListCategoria adapter = new AdapterListCategoria(this, listDatosCategoria);
