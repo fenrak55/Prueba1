@@ -36,9 +36,12 @@
     <string name="menu_salir">Salir</string>
 
     <!--Registro-->
-    <string name="tv_nombre">Ingrese su nombre</string>
-    <string name="tv_email">Ingrese su email</string>
-    <string name="tv_celular">Ingrese su celular</string>
+    <string name="view_nombre">Ingrese su nombre</string>
+    <string name="view_email">Ingrese su email</string>
+    <string name="view_celular">Ingrese su celular</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_celular">Celular</string>
     <string name="btn_enviar">Enviar</string>
 
     <!--Ayuda-->

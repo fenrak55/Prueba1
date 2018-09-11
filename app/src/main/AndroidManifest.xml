@@ -37,7 +37,9 @@
             android:parentActivityName=".ListItemCategoria"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
-        <activity android:name=".Registrarse"></activity>
+        <activity android:name=".Registrarse"
+            android:parentActivityName=".InformacionItem"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
         <activity android:name=".Ayuda">
 

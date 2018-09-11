@@ -1,75 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nombre_tv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registro"
-    tools:layout_editor_absoluteY="73dp">
+    android:orientation="vertical"
+    tools:context=".Registrarse"
+    tools:layout_editor_absoluteY="81dp">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/colorWhite"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <TextView
-        android:id="@+id/tv_nombre"
-        android:layout_width="560dp"
-        android:layout_height="36dp"
-        android:text="@string/tv_nombre"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="5dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/et_nombre"
-        android:layout_width="562dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="49dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-    <TextView
-        android:id="@+id/tv_email"
-        android:layout_width="127dp"
-        android:layout_height="36dp"
-        android:text="@string/tv_email"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="95dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_nombre"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="562dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="137dp" />
+            <EditText
+                android:id="@+id/txt_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_nombre"
+                android:inputType="text"/>
 
-    <TextView
-        android:id="@+id/tv_celular"
-        android:layout_width="127dp"
-        android:layout_height="36dp"
-        android:text="@string/tv_celular"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="188dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_email"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
-    <EditText
-        android:id="@+id/et_celular"
-        android:layout_width="560dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="224dp" />
+            <EditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_email"
+                android:inputType="textEmailAddress"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="79dp"
-        android:layout_height="36dp"
-        android:text="@string/btn_enviar"
-        tools:layout_editor_absoluteX="240dp"
-        tools:layout_editor_absoluteY="270dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_celular"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
-</android.support.constraint.ConstraintLayout>
+            <EditText
+                android:id="@+id/txt_celular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_celular"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/btn_enviar"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
