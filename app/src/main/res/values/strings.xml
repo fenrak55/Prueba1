@@ -32,10 +32,12 @@
 
     <!--menu_informacion_item-->
     <string name="menu_registrarse">Registrarse</string>
+    <string name="menu_configuracion">Configuracion</string>
     <string name="menu_ayuda">Ayuda</string>
     <string name="menu_salir">Salir</string>
 
     <!--Registro-->
+    <string name="view_mensaje">Puede realizar una busqueda de usuarios filtrando por un solo campo.</string>
     <string name="view_nombre">Ingrese su nombre</string>
     <string name="view_email">Ingrese su email</string>
     <string name="view_celular">Ingrese su celular</string>
@@ -46,5 +48,26 @@
 
     <!--Ayuda-->
     <string name="descripcion">Bienvenido a la pantalla de ayuda de TuristApp. Aqui encontraras informacion adicional por en caso de que la necesites.</string>
+
+    <!--item_list_edita-->
+    <string name="image_edita">Imagen del lugar</string>
+    <string name="view_nombre_edita">Nombre</string>
+    <string name="view_descripcion_edita">Descripcion</string>
+    <string name="image_btn_edita">Imagen que edita un lugar</string>
+
+    <!--activity_edita_lugar-->
+    <string name="view_edita_nombre">Nombre</string>
+    <string name="view_edita_descripcion">Descripcion</string>
+    <string name="view_edita_direccion">Direccion</string>
+    <string name="view_edita_telefono">Telefono</string>
+    <string name="view_edita_web">Sitio web</string>
+    <string name="view_edita_email">Email</string>
+    <string name="txt_nombre_edita">Nombre</string>
+    <string name="txt_descripcion_edita">Descripcion</string>
+    <string name="txt_direccion_edita">Direccion</string>
+    <string name="txt_telefono_edita">Telefono</string>
+    <string name="txt_sitio_edita">Sitio web</string>
+    <string name="txt_email_edita">Email</string>
+    <string name="btn_actualiza_item">Actualizar</string>
 
 </resources>

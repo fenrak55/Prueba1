@@ -6,9 +6,15 @@
         <item
             android:id="@+id/menu_registrarse"
             android:title="@string/menu_registrarse" />
+
+        <item
+            android:id="@+id/menu_configuracion"
+            android:title="@string/menu_configuracion"/>
+
         <item
             android:id="@+id/menu_ayuda"
             android:title="@string/menu_ayuda" />
+
         <item
             android:id="@+id/menu_salir"
             android:title="@string/menu_salir" />

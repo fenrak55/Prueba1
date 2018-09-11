@@ -31,7 +31,7 @@ public class ListItemCategoria extends AppCompatActivity {
     private Toolbar toolbar;
     private ActionBar actionBar;
     private SQLiteDatabase objDb;
-    public static int idC = 0;
+    private static int idC = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -12,17 +12,19 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".Splash"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Splash"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        </activity>
         <activity
             android:name=".ListItemCategoria"
             android:parentActivityName=".MainActivity"
@@ -35,13 +37,31 @@
         <activity
             android:name=".InformacionItem"
             android:parentActivityName=".ListItemCategoria"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-
-        <activity android:name=".Registrarse"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Registrarse"
             android:parentActivityName=".InformacionItem"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".Ayuda">
+        </activity>
+
+        <activity
+            android:name=".Ayuda"
+            android:parentActivityName=".InformacionItem"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".Configuracion"
+            android:parentActivityName=".InformacionItem"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".EditaLugar"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:parentActivityName=".Configuracion">
 
         </activity>
     </application>

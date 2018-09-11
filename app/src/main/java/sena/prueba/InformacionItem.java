@@ -30,6 +30,7 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
     private ImageButton btnWeb, btnMensaje, btnTelefono;
     private SQLiteDatabase objDb;
     private String sitioWeb, email, telefono;
+    private static int idC = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +60,12 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        //Recibo el id del AdapterListCategoria
-        int id = getIntent().getIntExtra(Utilidades.ID_TBL_LUGAR, 0);
-        if (id != 0){
-            consulta(id);
+        //Recibimos el id de MainActivity
+        if (getIntent().getIntExtra(Utilidades.ID_TBL_LUGAR, 0) != 0){
+            idC = getIntent().getIntExtra(Utilidades.ID_TBL_LUGAR, 0);
+            consulta(idC);
+        }else {
+            consulta(idC);
         }
     }
 
@@ -106,15 +109,26 @@ public class InformacionItem extends AppCompatActivity implements View.OnClickLi
         Intent objInten = null;
         switch (id){
             case R.id.menu_registrarse:
+                //Cambiamos a la actividad de registro
                 objInten = new Intent(InformacionItem.this, Registrarse.class);
                 startActivity(objInten);
                 break;
+            case R.id.menu_configuracion:
+                //Cambiamos a la actividad configuracion
+                objInten = new Intent(InformacionItem.this, Configuracion.class);
+                startActivity(objInten);
+                break;
             case R.id.menu_ayuda:
+                //Cambiamos a la actividad de ayuda
                 objInten = new Intent(InformacionItem.this, Ayuda.class);
                 startActivity(objInten);
                 break;
             case R.id.menu_salir:
-
+                //Salimos de la aplicacion
+                objInten=new Intent(Intent.ACTION_MAIN);
+                objInten.addCategory(Intent.CATEGORY_HOME);
+                objInten.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(objInten);
                 break;
         }
         return super.onOptionsItemSelected(item);
